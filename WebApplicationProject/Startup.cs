@@ -19,6 +19,7 @@ namespace WebApplicationProject
     {
         public Startup(IConfiguration configuration)
         {
+
             Configuration = configuration;
         }
 
