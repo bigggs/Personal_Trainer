@@ -1,9 +1,30 @@
 ﻿@page
 @model AboutModel
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "BMI Calculator";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
+<head>
+    <title>BMI Calculator</title>
+    <script type="text/javascript">
+        function bmi() {
 
-<p>Use this area to provide additional information.</p>
+            var sheight = parseFloat(document.getElementById(‘hgt’).value);
+            var sweight = parseFloat(document.getElementById(‘wgt’).value);
+            var bmi = sweight / Math.pow(sheight, 2);
+            var student_bmi = document.getElementById(‘bmi_index’);
+            student_bmi.textContent = bmi.toFixed(2);
+        }
+
+    </script>
+
+</head>
+<h1>Body Mass Index Calculator</h1>
+
+<h1>Student Name=<input type=text style=”font-size:25px; font-weight: bold;” id=”studentname”></h1>
+<h2>Height=<input type=text style=”font-size:20px; font-weight: bold;” id=”hgt”></h2>
+<h2>Weight=<input type=text style=”font-size:20px; font-weight: bold;” id=”wgt”></h2>
+<h2>BMI=<b id=”bmi_index”></b></h2>
+
+<input type=button value=Calculate onclick=bmi()>
+<script type=”text/javascript” src=”bmi2.js”></script>
+

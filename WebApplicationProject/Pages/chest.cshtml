@@ -54,21 +54,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
-
     <div class="container">
         <center>
+            <Font color="black">
                 <h1 v-if="showLiked">
                     <button v-on:click="showLiked = false">
                         Show everything
                     </button>
                 </h1>
+            </Font>
 
         </center>
         <section>
-            <br /><br /><br />
             <div class="items">
                 <div v-for="item in feedItems"
                      class="item">
@@ -79,16 +78,12 @@
                             <h3 class="title">
                                 {{ item.title }} <span class="view">double tap to like</span>
                             </h3>
-
                             <span class="heart small clickable"
                                   :class="{ 'faded' : !item.liked }"
                                   v-on:click="likeItem(item)"></span>
-
                         </div>
                     </div>
                 </div>
-
-
             </div>
     </div>
 
@@ -119,7 +114,7 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js'></script>
-    <script src="~/js/index.js"></script>
+    <script src="~/js/chest.js"></script>
 
 
 
