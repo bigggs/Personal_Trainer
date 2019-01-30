@@ -12,7 +12,7 @@ namespace WebApplicationProject.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "BMI healthy weight calculator.";
         }
     }
 }
