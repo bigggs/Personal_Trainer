@@ -15,7 +15,6 @@ input {
   font-weight: 500;
 }
 
-
 body {
   background-color: #f0f0f0;
 }
@@ -58,7 +57,7 @@ nav .nav-item.clickable:hover {
   border-color: rgba(0, 0, 0, 0.2);
 }
 nav .nav-item.active {
-  background-color: #FFFFFF;
+  background-color: #FF1EAD;
   color: white;
 }
 nav .nav-item.active .heart {
@@ -121,6 +120,7 @@ nav .nav-item.active .heart {
 }
 
 header {
+  background-color: black;
   color: white;
   padding: 100px 0 60px;
   margin-bottom: 140px;
@@ -205,7 +205,7 @@ header .title {
   height: 100%;
   border-radius: 6px;
   box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.2);
-  transition: all .7s;
+  transition: all .2s;
   overflow: hidden;
   background-visibility: hidden;
 }
@@ -288,20 +288,22 @@ footer a {
 }
 
 button {
-
-    background-color: whitesmoke;
+    appearance: none;
+    box-shadow: 0;
+    outline: 0;
+    background-color: #000000;
+    color: white;
     border-radius: 6px;
-    padding: 5px 12px 5px;
+    border: 2px solid #ff51c0;
+    padding: 7px 15px 6px;
     font-size: 14px;
-    color: black;
     cursor: pointer;
     transition: all .2s;
-
 }
-    button:hover {
-        background-color: ghostwhite;
-        border: 2px solid #c4c0c0;
-    }
+button:hover {
+  background-color: #ff38b6;
+  border: 2px solid #ffb7e5;
+}
 
 input {
   appearance: none;
@@ -310,7 +312,7 @@ input {
   background-color: transparent;
   color: black;
   border-radius: 6px;
-  border: 2px solid black;
+  border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 7px 15px 6px;
   font-size: 14px;
   cursor: pointer;
@@ -388,4 +390,3 @@ input {
     font-size: 20vmin;
   }
 }
-
