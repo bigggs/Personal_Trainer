@@ -1,0 +1,42 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "BMI Calculator";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<br /><br /><p>Use this calculator to check your body mass index (BMI) and find out if you are a healthy weight.</p> <br /><br />
+
+
+<HEAD>
+
+    <script type=”text/javascript”>
+       
+        function  calculateBMI() {
+          var weight = eval(document.form.weight.value)
+          var height = eval(document.form.height.value)
+          var height2 = height / 100
+          var BMI = weight  / (height2 * height2)
+          document.form.BodyMassIndex.value=custRound(BMI,1);
+        }
+
+        function custRound(x,places) {
+          return (Math.round(x*Math.pow(10,places)))/Math.pow(10,places)
+        }
+        // End –>
+    </script>
+</HEAD>
+
+    <BODY>
+
+        <div align=”center”>
+            <form name=”form” id=”form”>
+                <input type=”Text” name=”weight” size=”4″> Weight (in Kilos)  
+                <input type=”Text” name=”height” size=”4″> Height (in Centimeters)<br><br>
+                <input type=”Text” name=”BodyMassIndex” id=”BodyMassIndex” size=”4″> BMI     
+                <input type=”button” style=”font-size: 8pt” value=”Calculate” onClick=”calculateBMI()” name=”button”>
+                <input type=”reset” style=”font-size: 8pt” value=”Clear Form”>
+            </form>
+        </div>
+            </BODY>
